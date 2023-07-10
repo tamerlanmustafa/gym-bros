@@ -1,0 +1,49 @@
+// Fonts
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+$main-font: 'Poppins', sans-serif;
+$secondary-font: 'Montserrat', sans-serif;
+
+
+// Font sizes 
+
+$XXS: 0.625rem;
+$XS: 0.875rem;
+$S: 1rem;
+$M:1.5rem;
+$L: 2rem;
+$XL: 2.5rem;
+$XXL: 3rem;
+
+
+// Colors
+
+$darkBlue: #01071a;
+$darkGreen: #0B666A;
+$lightGreen: #35A29F;
+$extraLightGreen: #85d2a0;
+
+
+
+$darkPurple: #4A55A2;
+$lightPurple: #7895CB;
+$extraLightPurple: #A0BFE0;
+$lightBlue: #78C1F3;
+
+
+
+$white: white;
+$black: black;
+
+
+// Text
+
+h1,h2,h3 {
+    font-family: $main-font;
+}
+
+
+// Transition
+$transition: all 150ms ease-in-out;

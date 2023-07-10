@@ -1,0 +1,44 @@
+.header {
+    height: 35px;
+    width: 20%;
+    margin-top: 5%;
+    position: fixed;
+    right: 5%;
+    background-color:$extraLightGreen;
+    border: 1px solid $black;
+    border-radius: 10px;
+
+    .color-theme {
+        color: $darkBlue;
+    }
+    .hamburger {
+        width: auto;
+        gap: 4px;
+        span {
+            display: inline-block;
+            height: 2px;
+            width: 20px;
+            border-radius: 2px;
+            background-color: $darkBlue;
+        }
+    }
+
+    .mobile-menu{
+        position: fixed;
+        // visibility: hidden;
+        padding-right: 10px;
+        top: 0;
+        left: 100%;
+        width: 100%;
+        height: 100%;
+        font-size: $XXL;
+        background-color: $lightGreen;
+        gap: 10px;
+        z-index: -12;
+        transition: all 300ms ease;
+    }
+    .mobile-menu.open {
+        left: 0;
+        visibility: visible;
+    }
+}

@@ -1,0 +1,27 @@
+button {
+    cursor: pointer;
+    width: 15%;
+    padding: 10px 15px;
+    font-family: $secondary-font;
+    font-weight: 600;
+    color: $darkBlue;
+    background-color: $lightBlue;
+    border: 1px solid $darkBlue;
+    border-radius: 8px;
+    box-shadow: 0px 5px 0px 0px $darkBlue;
+    transition: $transition;
+
+    &:hover {
+        // position: relative;
+        // margin-top: 5px;
+        // transform: rotateX(25deg);
+        transform:translateY(5px);
+        box-shadow: 0px 1px 0px 0px $darkBlue;
+
+    }
+}
+
+.color-theme {
+    cursor: pointer;
+    
+}

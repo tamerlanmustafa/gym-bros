@@ -1,0 +1,30 @@
+$breakpoints: (
+  tablet: 768px,
+  desktop: 1024px
+);
+
+@mixin breakpoint($size) {
+    @if map-has-key($breakpoints, $size) {
+      $width: map-get($breakpoints, $size);
+      @media screen and (min-width: $width) {
+        @content;
+      }
+    } @else {
+      @error "Invalid breakpoint: #{$size}. Please use 'mobile', 'tablet', or 'desktop'.";
+    }
+}
+
+
+// Responsiveness
+
+.hide-for-mobile {
+    @media (max-width:768px){
+      display: none;
+  }
+}
+
+.hide-for-desktop {
+  @include breakpoint(desktop){
+      display: none;
+  }
+}

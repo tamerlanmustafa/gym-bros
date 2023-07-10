@@ -1,0 +1,35 @@
+// Flexbox settings
+.flex {
+    display:flex;
+    width: 100%;
+    &-fd-c {
+      flex-direction: column;
+    }
+    &-jc-sb {
+      justify-content: space-between;
+    }
+    &-jc-c {
+        justify-content: center;
+    }
+
+    &-jc-sa {
+        justify-content: space-around;
+    }
+    &-jc-se {
+        justify-content: space-evenly;
+    }
+    &-jc-fe {
+        justify-content: flex-end;
+    }
+    &-jc-fs {
+        justify-content: flex-start;
+    }
+    &-ai-c {
+        align-items: center;
+    }
+    &-ai-fe {
+        align-items:flex-end;
+    }
+
+    
+  }

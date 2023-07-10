@@ -1,0 +1,22 @@
+ // Color modes
+
+ .body-light-mode {
+    background-color: $darkPurple;
+    color: $white;
+    .header {
+      background-color: $lightBlue;
+    }
+}
+  
+  .body-dark-mode {
+    background-color: $darkBlue;
+    color: $white;
+
+    button {
+      color: $black;
+      background-color: $extraLightPurple;
+      border: 1px solid $lightGreen;
+      box-shadow: 0px 5px 0px 0px $lightGreen;
+    }
+    
+}
