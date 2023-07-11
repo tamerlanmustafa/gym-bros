@@ -44,6 +44,8 @@ h1,h2,h3 {
     font-family: $main-font;
 }
 
+// Box shadow
 
+$shadow:0 -5px 100px 3px $darkGreen;
 // Transition
 $transition: all 150ms ease-in-out;

@@ -1,0 +1,26 @@
+.sign-in {
+    height: 100%;
+    width: 100%;
+    gap: 30px;
+
+    form {
+        height: 50%;
+        width: 100%;
+        padding: 20px;
+        border: 1px solid $lightBlue;
+        gap: 50px;
+        >div {
+            width: 300px;
+        }
+        label {
+            float: left
+        }
+        input, input:focus, input:active {
+            float: right;
+            border: 1px solid $white;
+            border-radius: 5px;
+            outline: 2px solid $white;
+            background-color: $darkPurple;
+        }
+    }
+}

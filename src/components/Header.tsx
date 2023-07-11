@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
-
+import { Link } from "react-router-dom"
 const Header = () => {
   const [mode, setMode] = useState('dark');
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [flip, setFlip] = useState(false)
 
   useEffect(() => {
     if (mode === 'dark') {
@@ -20,6 +21,7 @@ const Header = () => {
 
   function toggleMobileMenu() {
     setIsMobileMenuOpen(prevIsMobileMenuOpen => !prevIsMobileMenuOpen);
+    setFlip(prevFlip => !prevFlip)
   }
 
   return (
@@ -28,10 +30,10 @@ const Header = () => {
         className="color-theme fa-solid fa-circle-half-stroke"
         onClick={toggleMode}
       ></i>
-      <div className="hamburger hide-for-desktop flex flex-fd-c" onClick={toggleMobileMenu}>
-        <span></span>
-        <span></span>
-        <span></span>
+      <div className={`hamburger hide-for-desktop flex flex-fd-c ${flip ? "flip" : ""} `} onClick={toggleMobileMenu}>
+        <span className='bar1'></span>
+        <span className='bar2'></span>
+        <span className='bar3'></span>
       </div>
       <div
         className={`mobile-menu hide-for-desktop flex flex-fd-c flex-jc-c flex-ai-fe ${
@@ -39,15 +41,15 @@ const Header = () => {
         }`}
       >
         <a href="/">Home</a>
-        <a href="">Classes</a>
-        <a href="">About us</a>
-        <a href="">Contact</a>
+        <a href="#classes">Classes</a>
+        <a href="#aboutus">About us</a>
+        <a href="#contact">Contact</a>
       </div>
-      <div className="desktop-menu hide-for-mobile">
-        <a href="">Home</a>
-        <a href="">Classes</a>
-        <a href="">About us</a>
-        <a href="">Contact</a>
+      <div className="desktop-menu flex flex-jc-sa hide-for-mobile">
+        <a href="/">Home</a>
+        <a href="#classes">Classes</a>
+        <a href="#aboutus">About us</a>
+        <a href="#contact">Contact</a>
       </div>
     </nav>
   );

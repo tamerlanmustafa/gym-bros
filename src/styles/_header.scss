@@ -1,3 +1,5 @@
+// Mobile
+
 .header {
     height: 35px;
     width: 20%;
@@ -7,6 +9,8 @@
     background-color:$extraLightGreen;
     border: 1px solid $black;
     border-radius: 10px;
+    font-weight: 700;
+    z-index: 3;
 
     .color-theme {
         color: $darkBlue;
@@ -22,17 +26,37 @@
             background-color: $darkBlue;
         }
     }
+    /// Hamburger menu animation
+    span {
+        transition: all 200ms ease-in-out;
+    }
+    .flip {
+        .bar1 {
+            transform: rotate(45deg);
+            transform-origin:5px 8px;
+            transition: all 200ms ease-in-out;
+        }
+        .bar2 {
+            opacity: 0;
+            transform: translate(10%);
+            transition: all 200ms ease-in-out;
+        }
+        .bar3 {
+            transform: rotate(-45deg);
+            transform-origin:4px -6px;
+            transition: all 200ms ease-in-out;
+        }
+    }
 
     .mobile-menu{
         position: fixed;
-        // visibility: hidden;
         padding-right: 10px;
         top: 0;
         left: 100%;
         width: 100%;
         height: 100%;
         font-size: $XXL;
-        background-color: $lightGreen;
+        background-color: $darkPurple;
         gap: 10px;
         z-index: -12;
         transition: all 300ms ease;
@@ -40,5 +64,45 @@
     .mobile-menu.open {
         left: 0;
         visibility: visible;
+
+        
+
     }
 }
+
+
+// Desktop 
+
+@include breakpoint(tablet) {
+    .header {
+        border: none;
+        height: 35px;
+        width: 60%;
+        margin-top: 20px;
+        left: unset;
+        right: unset;
+        border: 0;
+        border-radius: 30px;
+        justify-content: space-around;
+        flex-direction: row-reverse;
+        box-shadow: $shadow;
+        z-index: 3;
+
+        .color-theme {
+            position: absolute;
+            right: 10%;
+        }
+        .desktop-menu {
+            width: 60%;
+
+            a{
+                color: $darkBlue;
+                transition: $transition;
+                &:hover {
+                    color: $white;
+                }
+            }
+        }
+    }
+}
+

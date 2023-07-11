@@ -1,11 +1,24 @@
 import "./styles/styles.scss"
-import Header from "./components/Header"
+import { BrowserRouter, Routes, Route } from "react-router-dom"
+import Layout from "./components/Layout"
+import Home from "./components/Home"
+import SignIn from "./components/pages/SignIn"
+import Classes from "./components/pages/Classes"
+
 
 function App() {
   return (
-    <div className="App">
-      <Header />
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route element={<Layout/>}> 
+            <Route index element={<Home/>} />
+            <Route path="/signin" element={<SignIn/>} />
+            <Route path="/classes" element={<Classes/>} />
+          </Route>
+      </Routes>
+      
+    </BrowserRouter>
+    
 
   )
 }

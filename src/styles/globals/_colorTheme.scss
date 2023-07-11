@@ -4,10 +4,44 @@
     background-color: $darkPurple;
     color: $white;
     .header {
-      background-color: $lightBlue;
+      background-color: $white;
+      .color-theme {
+        color: $extraLightPurple;
+      }
+      span{
+        background-color: $extraLightPurple ;
+      }
+      .mobile-menu {
+        background-color: $lightGreen;
+      }
     }
+
+    .about-section {
+      >div {
+        >h2 {
+          background-color: $lightBlue;
+        }
+      }
+    }
+
+    .trainer-socials {
+       background-color: $lightPurple !important;
+    }
+    .classes-section {
+      .all-classes {
+        .class {
+      background-color: $lightPurple;
+    }
+      }
+    }
+    
+
+
 }
   
+
+
+
   .body-dark-mode {
     background-color: $darkBlue;
     color: $white;
